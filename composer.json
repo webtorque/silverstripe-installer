@@ -1,6 +1,6 @@
 {
-	"name": "silverstripe/installer",
-	"description": "The SilverStripe Framework Installer",
+	"name": "webtorque/ss-installer",
+	"description": "Installer for default SilverStripe package",
 	"require": {
 		"php": ">=5.3.2",
 		"silverstripe/cms": "3.1.*",
