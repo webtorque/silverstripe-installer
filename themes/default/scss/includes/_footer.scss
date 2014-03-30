@@ -1,0 +1,35 @@
+footer {
+	@include pie-clearfix;
+	width: 100%;
+	clear: both;
+	background-color: $secondary-color;
+
+	.column {
+		@include span-columns(3, $total-columns);
+		float: left;
+
+		&:nth-child(4) {
+			@include span-columns(3 omega, $total-columns);
+		}
+
+		ul {
+			padding: 0;
+		}
+
+		li {
+			list-style: none;
+			line-height: 24px;
+		}
+	}
+
+	.copyright {
+		@include span-columns(12 omega, $total-columns);
+		clear: both;
+		font-size: 12px;
+	}
+}
+
+.copyright-m {
+	display: none;
+	text-align: center;
+}

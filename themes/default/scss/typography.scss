@@ -1,0 +1,106 @@
+/* This typography file is included in the WYSIWYG editor */
+@import 'includes/settings';
+
+.typography * {
+	font-family: $primary-font;
+	font-size: 16px;
+}
+
+.typography {
+	p {
+		color: $text-color;
+		font-weight: 400;
+		line-height: 22px;
+	}
+
+	ul li,
+	ol li, {
+		list-style-type: disc;
+		line-height: 24px;
+	}
+
+	a {
+		color: $text-color;
+		text-decoration: none;
+	}
+
+	h1 {
+		font-size: 28px;
+		font-weight: 700;
+	}
+
+	h2 {
+		font-size: 24px;
+		font-weight: 400;
+	}
+
+	h3 {
+		font-size: 20px;
+		font-weight: 400;
+	}
+
+	h4 {
+		font-size: 18px;
+		font-weight: 400;
+	}
+
+	table {
+		font-size: $font-size;
+		max-width: 100%;
+
+		td {
+			padding: 8px;
+			border: 1px solid #acafa9;
+		}
+	}
+
+	/* WYSIWYG EDITOR ALIGNMENT CLASSES */
+	.left {
+		text-align: left;
+	}
+
+	.center {
+		text-align: center;
+	}
+
+	.right {
+		text-align: right;
+	}
+
+	img {
+		&.left {
+			float: left;
+			margin: 10px 10px 0 0;
+		}
+
+		&.right {
+			float: right;
+		}
+	}
+
+	/* BUTTON STYLE */
+//	.button {
+//		@include button-style-1(#2ba6cb);
+//
+//		a {
+//			color: #fff;
+//			text-transform: capitalize;
+//			display: block;
+//			padding: 10px 16px;
+//		}
+//
+//		a:hover {
+//			text-decoration: none;
+//			background-color: $hover-button;
+//		}
+//
+//		a:after {
+//			content: ">";
+//		}
+//	}
+
+	.button {
+		@include sassy-button("matte", 5px, 19px, #cede85, #a7bf35, #fff, "false");
+	}
+}
+

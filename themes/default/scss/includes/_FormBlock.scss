@@ -1,0 +1,79 @@
+@import "includes/settings";
+
+
+@mixin input-border {
+	border: 1px solid #888;
+}
+
+@mixin button-style-1 {
+	background-color: #2ba6cb;
+	color: #fff;
+}
+
+.field {
+	@include pie-clearfix;
+	clear: both;
+	margin: 6px 0;
+}
+
+fieldset {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+label {
+	@include span-columns(9, 9);
+
+	@include at-breakpoint(0 1023px 9) {
+		@include span-columns(9 omega, 9);
+	}
+
+	@include at-breakpoint(0 767px 6) {
+		@include span-columns(6 omega, 6);
+	}
+
+	float: left;
+	display: inline-block;
+	font-size: 16px;
+	padding: 5px 0;
+}
+
+input,
+select,
+textarea {
+	@include span-columns(9 omega, 9);
+
+	@include at-breakpoint(0 1023px 9) {
+		@include span-columns(9 omega, 9);
+	}
+
+	@include at-breakpoint(0 767px 6) {
+		@include span-columns(6 omega, 6);
+	}
+
+	float: left;
+	clear: both;
+	display: inline-block;
+	border: none;
+	padding: 6px;
+	margin: 0;
+	background-color: $input-color;
+	outline: none;
+}
+
+input[type="submit"] {width:auto;}
+
+.buttons {
+	float: right;
+	button {
+		@include button-style-1;
+		border: 0;
+		border-radius: 0;
+		display: inline-block;
+		cursor: pointer;
+		margin: 0;
+		padding: 0 10px;
+		height: 34px;
+	}
+}

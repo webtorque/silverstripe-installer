@@ -1,0 +1,76 @@
+@import 'includes/settings';
+
+
+* {
+	@include box-sizing(border-box);
+}
+
+html,
+body {
+	height: 100%;
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	color: $text-color;
+	font-family: $primary-font;
+	font-size: 16px;
+}
+
+img {
+	border: 0;
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	max-width: 100%;
+}
+
+ul li,
+ol li {
+	line-height: 24px;
+}
+
+a {
+	text-decoration: none;
+	color: $text-color;
+	display: block;
+
+	&:hover {
+		color: lighten($text-color, 20%);
+	}
+
+	&:active {
+		color: $text-color;
+	}
+}
+
+.content {
+	@include pie-clearfix;
+	@include container;
+	@include susy-grid-background;
+	max-width: 960px;
+
+	article {
+		@include span-columns(12 omega, $total-columns);
+
+		&.sidenav-page {
+			@include span-columns(9, $total-columns);
+		}
+	}
+
+	aside.sidebar {
+		@include span-columns(3 omega, $total-columns);
+	}
+}
+
+@import 'includes/header';
+@import 'includes/HeroSlider';
+@import 'includes/breadcrumbs';
+@import 'includes/footer';

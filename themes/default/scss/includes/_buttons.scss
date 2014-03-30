@@ -1,0 +1,10 @@
+@mixin button-style-1($color) {
+	background-color: $color;/*#2ba6cb*/
+	color: #fff;
+	width: auto;
+	display: inline-block;
+	text-transform: capitalize;
+	margin: 20px 10px 20px 0;
+}
+
+$hover-button: #106f8b;

@@ -1,0 +1,142 @@
+/* This typography file is included in the WYSIWYG editor */
+/* Grids */
+/* $gutter-width */
+/* Main Colours */
+/* Fonts */
+/* line 4, ../scss/typography.scss */
+.typography * {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* line 9, ../scss/typography.scss */
+.typography {
+  /* WYSIWYG EDITOR ALIGNMENT CLASSES */
+  /* BUTTON STYLE */
+}
+/* line 10, ../scss/typography.scss */
+.typography p {
+  color: #333333;
+  font-weight: 400;
+  line-height: 22px;
+}
+/* line 17, ../scss/typography.scss */
+.typography ul li,
+.typography ol li {
+  list-style-type: disc;
+  line-height: 24px;
+}
+/* line 22, ../scss/typography.scss */
+.typography a {
+  color: #333333;
+  text-decoration: none;
+}
+/* line 27, ../scss/typography.scss */
+.typography h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+/* line 32, ../scss/typography.scss */
+.typography h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+/* line 37, ../scss/typography.scss */
+.typography h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+/* line 42, ../scss/typography.scss */
+.typography h4 {
+  font-size: 18px;
+  font-weight: 400;
+}
+/* line 47, ../scss/typography.scss */
+.typography table {
+  font-size: 16px;
+  max-width: 100%;
+}
+/* line 51, ../scss/typography.scss */
+.typography table td {
+  padding: 8px;
+  border: 1px solid #acafa9;
+}
+/* line 58, ../scss/typography.scss */
+.typography .left {
+  text-align: left;
+}
+/* line 62, ../scss/typography.scss */
+.typography .center {
+  text-align: center;
+}
+/* line 66, ../scss/typography.scss */
+.typography .right {
+  text-align: right;
+}
+/* line 71, ../scss/typography.scss */
+.typography img.left {
+  float: left;
+  margin: 10px 10px 0 0;
+}
+/* line 76, ../scss/typography.scss */
+.typography img.right {
+  float: right;
+}
+/* line 102, ../scss/typography.scss */
+.typography .button {
+  font-size: 19px;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFCEDE85', endColorstr='#FFADC736');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cede85), color-stop(70%, #a7bf35));
+  background: -webkit-linear-gradient(#cede85, #a7bf35 70%);
+  background: -moz-linear-gradient(#cede85, #a7bf35 70%);
+  background: -o-linear-gradient(#cede85, #a7bf35 70%);
+  background: linear-gradient(#cede85, #a7bf35 70%);
+  -webkit-box-shadow: #e6eec1 0 1px 0 inset;
+  -moz-box-shadow: #e6eec1 0 1px 0 inset;
+  box-shadow: #e6eec1 0 1px 0 inset;
+  border: 1px solid #96ab2f;
+  color: white;
+}
+/* line 15, F:/Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.typography .button:hover {
+  text-decoration: none;
+}
+/* line 18, F:/Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.typography .button:hover {
+  background-color: #96ab2f;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #c6d971), color-stop(75%, #96ab2f));
+  background: -webkit-linear-gradient(#c6d971 3%, #96ab2f 75%);
+  background: -moz-linear-gradient(#c6d971 3%, #96ab2f 75%);
+  background: -o-linear-gradient(#c6d971 3%, #96ab2f 75%);
+  background: linear-gradient(#c6d971 3%, #96ab2f 75%);
+}
+/* line 21, F:/Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.typography .button:active {
+  -webkit-box-shadow: #8b9f2c 0 1px 2px inset;
+  -moz-box-shadow: #8b9f2c 0 1px 2px inset;
+  box-shadow: #8b9f2c 0 1px 2px inset;
+}
+/* line 6, F:/Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.typography .button.disabled, .typography .button[disabled] {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  background: #a7bf35;
+  cursor: default;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 74, F:/Ruby193/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.2.6/stylesheets/_sassy-buttons.sass */
+.typography .button::-moz-focus-inner {
+  padding: 0 !important;
+  margin: -1px !important;
+}

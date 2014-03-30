@@ -1,0 +1,244 @@
+/* Grids */
+/* $gutter-width */
+/* Main Colours */
+/* Fonts */
+@media (max-width: 1023px) {
+  /* line 6, ../scss/responsive/_layout-768.scss */
+  .content {
+    padding: 0 12px;
+  }
+  /* line 8, ../scss/responsive/_layout-768.scss */
+  .content article {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 9, ../scss/responsive/_layout-768.scss */
+  .content article.sidenav-page {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 16, ../scss/responsive/_layout-768.scss */
+  .content aside.sidebar {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 20, ../scss/responsive/_layout-768.scss */
+  .content .promo-boxes-1 .promo-box {
+    width: 48.93617%;
+    float: left;
+    margin-right: 2.12766%;
+    margin-bottom: 20px;
+  }
+  /* line 24, ../scss/responsive/_layout-768.scss */
+  .content .promo-boxes-1 .promo-box:nth-child(even) {
+    width: 48.93617%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* PROMO-BOX SIDE-BAR */
+  /* line 32, ../scss/responsive/_layout-768.scss */
+  .promo-boxes-2 .promo-box {
+    width: 23.40426%;
+    float: left;
+    margin-right: 2.12766%;
+    display: inline-block;
+  }
+  /* line 36, ../scss/responsive/_layout-768.scss */
+  .promo-boxes-2 .promo-box:last-child {
+    width: 23.40426%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* GALLERY */
+  /* line 43, ../scss/responsive/_layout-768.scss */
+  .gallery-left {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 44, ../scss/responsive/_layout-768.scss */
+  .gallery-wrapper .menu {
+    display: none;
+  }
+}
+/* Grids */
+/* $gutter-width */
+/* Main Colours */
+/* Fonts */
+@media (max-width: 767px) {
+  /* line 7, ../scss/responsive/_layout-320.scss */
+  header .logo {
+    width: 75%;
+  }
+  /* line 9, ../scss/responsive/_layout-320.scss */
+  header .logo h1 a {
+    max-width: 320px;
+  }
+  /* line 12, ../scss/responsive/_layout-320.scss */
+  header nav {
+    display: inline-block;
+    float: right;
+    clear: none;
+    top: 26px;
+    margin: 0;
+  }
+
+  /* line 15, ../scss/responsive/_layout-320.scss */
+  #menu-icon {
+    color: #222;
+    width: 42px;
+    height: 30px;
+    background: url("../images/menu-icon.png") no-repeat center center #888888;
+    cursor: pointer;
+    border: 1px solid black;
+    display: block;
+    float: right;
+  }
+
+  /* line 26, ../scss/responsive/_layout-320.scss */
+  .nav {
+    margin: 0;
+    clear: both;
+    position: absolute;
+    top: 29px;
+    right: 0;
+    width: 160px;
+    z-index: 999;
+    padding: 5px;
+    background-color: #f8f8f8;
+    border: 1px solid black;
+    display: none;
+  }
+  /* line 39, ../scss/responsive/_layout-320.scss */
+  .nav li {
+    display: block;
+    border: 0;
+    text-align: right;
+  }
+  /* line 41, ../scss/responsive/_layout-320.scss */
+  .nav a {
+    display: block;
+    padding: 5px;
+  }
+  /* line 43, ../scss/responsive/_layout-320.scss */
+  .nav li:hover .dropdown {
+    display: none;
+  }
+
+  /* line 46, ../scss/responsive/_layout-320.scss */
+  .search-bar {
+    display: none;
+  }
+
+  /* line 48, ../scss/responsive/_layout-320.scss */
+  .content {
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+  /* line 51, ../scss/responsive/_layout-320.scss */
+  .content article {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 52, ../scss/responsive/_layout-320.scss */
+  .content article.sidenav-page {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 59, ../scss/responsive/_layout-320.scss */
+  .content aside.sidebar {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* PROMO-BOX HOMEPAGE */
+  /* line 65, ../scss/responsive/_layout-320.scss */
+  .promo-boxes-1 {
+    margin: 20px 0;
+  }
+  /* line 68, ../scss/responsive/_layout-320.scss */
+  .promo-boxes-1 .promo-box {
+    width: 47.82609%;
+    float: left;
+    margin-right: 4.34783%;
+  }
+  /* line 71, ../scss/responsive/_layout-320.scss */
+  .promo-boxes-1 .promo-box:nth-child(even) {
+    width: 47.82609%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* PROMO-BOX SIDE-BAR */
+  /* line 79, ../scss/responsive/_layout-320.scss */
+  .promo-boxes-2 .promo-box {
+    width: 47.82609%;
+    float: left;
+    margin-right: 4.34783%;
+    margin-bottom: 20px;
+  }
+  /* line 83, ../scss/responsive/_layout-320.scss */
+  .promo-boxes-2 .promo-box:nth-child(even) {
+    width: 47.82609%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* FOOTER */
+  /* line 90, ../scss/responsive/_layout-320.scss */
+  footer {
+    display: none;
+  }
+
+  /* line 94, ../scss/responsive/_layout-320.scss */
+  .copyright-m {
+    display: block;
+    clear: both;
+    font-size: 12px;
+    padding: 20px 0 10px 0;
+  }
+  /* line 100, ../scss/responsive/_layout-320.scss */
+  .copyright-m p {
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  /* GALLERY */
+  /* line 108, ../scss/responsive/_layout-320.scss */
+  .gallery-tab li {
+    width: 146px;
+    margin: 0 4px 4px 0;
+    display: none;
+  }
+  /* line 114, ../scss/responsive/_layout-320.scss */
+  .gallery-tab li.previous {
+    display: inline-block;
+    width: 34px;
+    height: 38px;
+    background-image: url(../images/prev.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 34%;
+  }
+  /* line 124, ../scss/responsive/_layout-320.scss */
+  .gallery-tab li.next {
+    display: inline-block;
+    width: 90px;
+    height: 38px;
+  }
+}
