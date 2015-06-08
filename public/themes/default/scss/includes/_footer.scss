@@ -1,0 +1,48 @@
+footer {
+	@include pie-clearfix;
+	width: 100%;
+	clear: both;
+	background-color: $orange;
+	margin-top: 40px;
+
+	ul {
+		padding: 0;
+
+		li {
+			list-style: none;
+		}
+	}
+
+	.copyright {
+		width: columns($total-columns);
+		clear: both;
+		font-size: 12px;
+	}
+
+	&.footer-m {
+		display: none;
+	}
+}
+
+
+
+@include at-breakpoint(0 768px $mobile-columns) {
+
+	footer {
+		display: none;
+
+		&.footer-m {
+			display: block;
+			text-align: center;
+			clear: both;
+			font-size: 12px;
+			padding: 20px 0 10px 0;
+
+			p {
+				display: inline-block;
+				margin: 0 auto;
+			}
+		}
+	}
+
+}

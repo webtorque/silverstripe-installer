@@ -1,0 +1,43 @@
+// Grids
+$total-columns: 12;
+$mobile-columns: 6;
+$column-width: 60px;
+$gutter-width: 20px;
+$grid-padding: 0;
+$show-grid-backgrounds: false;
+$container-style: fluid;
+
+
+// Breakpoint Layout
+$small-layout: 480px;
+$medium-layout: 768px;
+$large-layout: 800px;
+$xlarge-layout: 1024px;
+
+
+// Layout variables
+$fixed-width: 960px;
+
+
+// Typography
+$base-font-size: 15px;
+$base-line-height: 22px;
+$base-color: #222;
+$base-font-family: 'Open Sans', sans-serif;
+$input-color: #eee;
+$placeholder-color: #999;
+
+
+// Main Colours
+$grey: #888;
+$orange: #ee7c1f;
+
+$primary-color: $orange;
+$secondary-color: $grey;
+$tertiary-color: #000;
+
+$body-bg: #FFF;
+$header-bg: #FFF;
+$content-bg: #FFF;
+$thead-bg: $secondary-color;
+$link-color: $secondary-color;

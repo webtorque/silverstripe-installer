@@ -1,0 +1,19 @@
+header.inline-header {
+	.logo {
+		float: left;
+		display: inline-block;
+		margin-left: 30px;
+	}
+
+	nav {
+		clear: none;
+		float: left;
+		display: inline-block;
+		width: auto;
+		margin-left: 35px;
+	}
+
+	> .fixed-w .logo {
+		margin-left: 0;
+	}
+}

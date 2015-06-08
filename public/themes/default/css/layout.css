@@ -1,0 +1,296 @@
+/*
+ * Vertical aligning center classes.
+*/
+/*
+ * Image replacement
+*/
+/*
+ * Max content width
+*/
+/*
+ * To stop the browser asking for copy/save/select the image.
+*/
+/*
+ * Custom Checkbox
+*/
+/*
+ * Custom Radio Button
+*/
+/*
+ * Link Colour
+*/
+/*
+ * Placeholder Text
+*/
+/*
+ * Shapes
+*/
+/*
+ * Base path for images
+*/
+/*
+ * Set aspect ratio
+*/
+/*
+ * Set aspect ratio with text inside
+*/
+/* line 15, ../scss/includes/_buttons.scss */
+.button {
+  background-color: #f58220;
+  width: auto;
+  display: inline-block;
+  text-transform: capitalize;
+  margin: 0 10px 0 0;
+  color: #fff;
+  text-decoration: none !important;
+  font-size: 16px;
+  font-size: 1.06667rem;
+  line-height: 22px;
+  line-height: 1.46667rem;
+  padding: 10px;
+  padding: 0.66667rem;
+}
+/* line 18, ../scss/includes/_buttons.scss */
+.button a {
+  color: #fff;
+  text-decoration: none !important;
+}
+
+/* line 3, ../scss/layout.scss */
+#content {
+  min-height: 600px;
+}
+
+/* line 7, ../scss/layout.scss */
+.container {
+  *zoom: 1;
+}
+/* line 38, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 11, ../scss/layout.scss */
+.fixed-w {
+  *zoom: 1;
+  *zoom: 1;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-background-origin: content;
+  -moz-background-origin: content;
+  -ms-background-origin: content-box;
+  -o-background-origin: content-box;
+  background-origin: content-box;
+  -webkit-background-clip: content-box;
+  -moz-background-clip: content-box;
+  background-clip: content-box;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+/* line 38, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.fixed-w:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 38, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.fixed-w:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 24, ../scss/layout.scss */
+.side-menu-page .content {
+  width: 74.46809%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+/* line 28, ../scss/layout.scss */
+.side-menu-page .sidebar {
+  width: 23.40426%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}
+
+/* line 34, ../scss/layout.scss */
+.module {
+  *zoom: 1;
+  clear: both;
+  padding: 30px 0;
+}
+/* line 38, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.module:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 40, ../scss/layout.scss */
+[role=layout] {
+  width: 100%;
+}
+
+/* line 44, ../scss/layout.scss */
+.mid-transition {
+  position: absolute;
+}
+
+/* line 50, ../scss/layout.scss */
+.row {
+  clear: both;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  *zoom: 1;
+}
+/* line 38, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 60, ../scss/layout.scss */
+.hasColumn {
+  *zoom: 1;
+}
+/* line 38, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.hasColumn:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 65, ../scss/layout.scss */
+.col-2 .col {
+  width: 48.93617%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+/* line 67, ../scss/layout.scss */
+.col-2 .col:last-child {
+  width: 48.93617%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}
+
+/* line 73, ../scss/layout.scss */
+.col-3 .col {
+  width: 31.91489%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+/* line 75, ../scss/layout.scss */
+.col-3 .col:last-child {
+  width: 31.91489%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}
+
+/* line 81, ../scss/layout.scss */
+.col-4 .col {
+  width: 23.5%;
+  width: -moz-calc(25% - 15px);
+  width: -o-calc(25% - 15px);
+  width: -webkit-calc(25% - 15px);
+  width: calc(25% - 15px);
+  margin-right: 20px;
+  float: left;
+  list-style: none;
+}
+/* line 88, ../scss/layout.scss */
+.col-4 .col:last-child {
+  margin-right: 0;
+  float: right;
+}
+
+/* line 98, ../scss/layout.scss */
+.tableContainer {
+  display: table;
+  height: 100px;
+  border: 1px solid grey;
+}
+/* line 16, ../scss/lib/_mixins.scss */
+.tableContainer .tableCellContainer {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 103, ../scss/layout.scss */
+.verticalAlignMiddle {
+  height: 100px;
+  border: 1px solid grey;
+}
+/* line 25, ../scss/lib/_mixins.scss */
+.verticalAlignMiddle:before {
+  content: '';
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 32, ../scss/lib/_mixins.scss */
+.verticalAlignMiddle > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media (max-width: 1024px) {
+  /* line 111, ../scss/layout.scss */
+  .fixed-w {
+    padding: 0 12px;
+  }
+
+  /* line 116, ../scss/layout.scss */
+  .side-menu-page .content {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 120, ../scss/layout.scss */
+  .side-menu-page .sidebar {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  /* line 130, ../scss/layout.scss */
+  html {
+    font-size: 13px;
+  }
+
+  /* line 134, ../scss/layout.scss */
+  .fixed-w {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 139, ../scss/layout.scss */
+  .side-menu-page .content {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 143, ../scss/layout.scss */
+  .side-menu-page .sidebar {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+}

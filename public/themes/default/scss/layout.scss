@@ -1,0 +1,148 @@
+@import "base";
+
+#content {
+	min-height:600px
+}
+
+.container {
+	@include pie-clearfix;
+}
+
+.fixed-w {
+	@include pie-clearfix;
+	@include container;
+	@include susy-grid-background;
+	width: columns($total-columns);
+	max-width: $fixed-width;
+	margin: 0 auto;
+	display: block;
+	position: relative;
+}
+
+// Side Menu Page Layout
+.side-menu-page {
+	.content {
+		@include span-columns(9);
+	}
+
+	.sidebar {
+		@include span-columns(3 omega);
+	}
+}
+
+
+.module {
+	@include pie-clearfix;
+	clear: both;
+	padding: 30px 0;
+}
+
+[role=layout] {
+	width:100%;
+}
+
+.mid-transition {
+	position:absolute;
+}
+
+
+// Row Layout
+.row {
+	clear: both;
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	@include pie-clearfix;
+}
+
+
+// Column Layout
+.hasColumn {
+	@include pie-clearfix;
+}
+
+.col-2 {
+	.col {
+		@include span-columns(6);
+		&:last-child {
+			@include span-columns(6 omega);
+		}
+	}
+}
+.col-3 {
+	.col {
+		@include span-columns(4);
+		&:last-child {
+			@include span-columns(4 omega);
+		}
+	}
+}
+.col-4 {
+	.col {
+		//		@include span-columns(3);
+		width: 25% - 1.5%; //Fallback for Safari
+		@include calc('width', '25% - 15px');
+		margin-right: 20px;
+		float: left;
+		list-style: none;
+		&:last-child {
+			//			@include span-columns(3 omega);
+			margin-right: 0;
+			float: right;
+		}
+	}
+}
+
+// Vertical Align Middle Classes.
+// All mixin need to have height.
+.tableContainer {
+	@include tableContainer(100px);
+	border: 1px solid grey;
+}
+
+.verticalAlignMiddle {
+	@include verticalAlignMiddle(100px);
+	border: 1px solid grey;
+}
+
+
+@include at-breakpoint(0 1024px $total-columns) {
+
+	.fixed-w {
+		padding: 0 12px;
+	}
+
+	.side-menu-page {
+		.content {
+			@include span-columns($total-columns omega);
+		}
+
+		.sidebar {
+			width: columns($total-columns);
+		}
+	}
+
+}
+
+
+@include at-breakpoint(0 768px $mobile-columns) {
+
+	html {
+		font-size: 13px;
+	}
+
+	.fixed-w {
+		@include span-columns($mobile-columns omega);
+	}
+
+	.side-menu-page {
+		.content {
+			@include span-columns($mobile-columns omega);
+		}
+
+		.sidebar {
+			@include span-columns($mobile-columns omega);
+		}
+	}
+
+}

@@ -1,0 +1,55 @@
+@import 'heroImage';
+@import 'heroSlider';
+
+// Image Position
+.position-0 {
+	background-position: center 0% !important;
+}
+.position-10 {
+	background-position: center 10% !important;
+}
+.position-20 {
+	background-position: center 20% !important;
+}
+.position-30 {
+	background-position: center 30% !important;
+}
+.position-40 {
+	background-position: center 40% !important;
+}
+.position-50 {
+	background-position: center 50% !important;
+}
+.position-60 {
+	background-position: center 60% !important;
+}
+.position-70 {
+	background-position: center 70% !important;
+}
+.position-80 {
+	background-position: center 80% !important;
+}
+.position-90 {
+	background-position: center 90% !important;
+}
+.position-100 {
+	background-position: center 100% !important;
+}
+
+
+// Slide Text
+.slide-text {
+	position: absolute;
+
+	&.single {
+
+	}
+
+	&.multiple {
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		max-width: $fixed-width;
+		width: 100%;
+	}
+}

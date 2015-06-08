@@ -1,0 +1,463 @@
+@mixin calc($property, $expression) {
+	#{$property}: -moz-calc(#{$expression});
+	#{$property}: -o-calc(#{$expression});
+	#{$property}: -webkit-calc(#{$expression});
+	#{$property}: calc(#{$expression});
+}
+
+
+/*
+ * Vertical aligning center classes.
+*/
+@mixin tableContainer($height) {
+	display: table;
+	height: $height;
+
+	.tableCellContainer {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+@mixin verticalAlignMiddle($height) {
+	height: $height;
+
+	&:before {
+		content: '';
+		height: 100%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	> * {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+
+@mixin pixelToREM($property, $pixelValues) {
+
+	$values: ();
+	$sublists: false;
+
+	@each $s in $pixelValues {
+		@if type-of($s) == list {
+			$sublists: true;
+			$vv: ();
+			@each $ss in $s {
+				@if type-of($ss) == number {
+					$vv: ($ss / $base-font-size) + rem;
+				} @else {
+					$vv: $ss;
+				}
+			}
+			$values: append($values, $vv);
+		} @else {
+
+			@if type-of($s) == number{
+				@if $s == 0 {
+					$values: append($values, 0);
+				} @else {
+					$values: append($values, ($s / $base-font-size) + rem);
+				}
+			}
+			@else {
+				$values: append($values, $s);
+			}
+		}
+	}
+	$value: $values;
+
+	#{$property}: $pixelValues;
+	#{$property}: $value;
+}
+
+@function aPixelToREM($pixelValue) {
+
+	$value: ();
+	$sublists: false;
+
+
+	@if type-of($pixelValue) == number{
+		@if $pixelValue == 0 {
+			$value: append($value, 0);
+		} @else {
+			$value: append($value, ($pixelValue / $base-font-size) + rem);
+		}
+	}
+	@else {
+		$value: append($values, $pixelValue);
+	}
+
+
+	@return $value;
+}
+
+
+
+// Makes IE 8 better by adding background-size.
+@mixin ms-background-size(){
+	.lt-ie9 & {
+		-ms-behavior: url(/themes/silverfern/ie-is-a-joke/backgroundsize.min.htc);
+	}
+}
+
+
+// The general purpose retina sprite mixin.
+//
+//    @include retina-sprite(name, $spritemap1, $spritemap2)
+//    @include retina-sprite(name, $spritemap1, $spritemap2[, $dimensions: true, $pad: 0])
+//
+//    If `dimensions` is true, then width/height will also be set.
+//
+//    if `pad` is non-zero, then that's how much padding the element will have (requires
+//    $spacing on the sprite maps). Great for iPhone interfaces to make hit areas bigger.
+//
+@mixin retina-sprite($name, $sprites, $sprites2x, $dimensions: true, $pad: 0) {
+	@if $dimensions == true {
+		@include sprite-dimensions($sprites, $name);
+	}
+
+	background-image: sprite-url($sprites);
+	background-position: sprite-position($sprites, $name, -$pad, -$pad);
+	background-repeat: no-repeat;
+
+	@if $pad > 0 {
+		padding: $pad;
+	}
+
+	@media (-webkit-min-device-pixel-ratio: 1.5), (min-moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5){
+		& {
+			$pos: sprite-position($sprites2x, $name, -$pad*2, -$pad*2);
+			background-image: sprite-url($sprites2x);
+			background-position: nth($pos, 1) nth($pos, 2)/2;
+			@include background-size( ceil(image-width( sprite-path($sprites2x)) / 2), auto );
+			// ^-- this is the "smarter" way to do this.
+			//     sprite-path() returns the path of the generated sprite sheet, which
+			//     image-width() calculates the width of. the ceil() is in place in case
+			//     you have sprites that have an odd-number of pixels in width (which
+			//     you shouldn't in the first place)
+		}
+	}
+}
+
+
+
+// The sprite mixin.
+// This delegates to the reusable retina-sprite mixin.
+@mixin sprite($name, $sprites, $sprites2x) {
+	@include retina-sprite($name, $sprites, $sprites2x)
+}
+
+
+// Auto generate retina sprite classes from 2 maps.
+// $prefix = classname prefix.
+// $map = the normal sprite map.
+// $map2x = the high dpi sprite map.
+@mixin sprite-classes($prefix, $map, $map2x) {
+
+	$names: sprite_names($map);
+
+	@each $name in $names {
+		.#{$prefix}-#{$name} {
+			@include sprite($name, $map, $map2x);
+		}
+	}
+
+}
+
+
+@mixin icon(){
+	font-family: 'sffIcons';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+/*
+ * Image replacement
+*/
+@mixin ir() {
+	display: block; text-indent: -999em; text-align: left; overflow: hidden; background-repeat: no-repeat;
+	&:before {
+		content: "";
+		display: inline-block;
+		width: 0;
+		height: 100%;
+	}
+}
+
+
+/*
+ * Max content width
+*/
+@mixin fixed-width {
+	@include pixelToREM('width', $fixed-width);
+	@include box-sizing(border-box);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/*
+ * To stop the browser asking for copy/save/select the image.
+*/
+@mixin no-select{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+
+@mixin table-base{
+	th{
+		text-align: center;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 18px;
+	}
+	td{
+		text-align: left;
+		font-style: italic;
+		font-size: 14px;
+		vertical-align: middle;
+	}
+}
+
+
+/*
+ * Custom Checkbox
+*/
+@mixin checkbox {
+	padding-left: 0;
+	li {
+		list-style: none !important;
+	}
+	label{
+		display: inline-block;
+		cursor: pointer;
+		position: relative;
+		padding-left: 32px;
+		margin-right: 15px;
+	}
+	input[type=checkbox] {
+		display: block;
+		visibility: hidden;
+		position: absolute;
+		width: auto;
+	}
+	label:before {
+		content: "";
+		display: inline-block;
+
+		width: 17px;
+		height: 17px;
+
+		margin-right: 10px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: #fff;
+		border: 1px solid #b2aea5;
+	}
+	input[type=checkbox]:checked + label:before {
+		content: "\2713";
+		font-size: 15px;
+		color: black;
+		text-align: center;
+		line-height: 17px;
+		font-weight: 700;
+	}
+	label.error:before {
+		display: none;
+	}
+}
+
+/*
+ * Custom Radio Button
+*/
+@mixin radio {
+	padding-left: 0;
+	li {
+		list-style: none !important;
+		display: inline-block;
+	}
+	label{
+		display: inline-block;
+		cursor: pointer;
+		position: relative;
+		padding-left: 32px;
+		margin-right: 15px;
+	}
+	input[type=radio] {
+		display: block;
+		visibility: hidden;
+		position: absolute;
+		width: auto;
+	}
+	label:before {
+		content: "";
+		display: inline-block;
+
+		width: 18px;
+		height: 18px;
+
+		margin-right: 10px;
+		position: absolute;
+		left: 0;
+		top: -1px;
+		background-color: #fff;
+		border: 1px solid #b2aea5;
+		border-radius: 50%;
+	}
+	input[type=radio]:checked + label:before {
+		content: '\2022';
+		color: black;
+		font-size: 30px;
+		text-align: center;
+		line-height: 19px;
+		font-weight: 700;
+	}
+	label.error:before {
+		display: none;
+	}
+}
+
+
+/*
+ * Link Colour
+*/
+@mixin link-colors($link, $visit, $hover, $active) {
+	a {
+		color: $link;
+		&:visited {
+			color: $visit;
+		}
+		&:hover {
+			color: $hover;
+		}
+		&:active {
+			color: $active;
+		}
+	}
+}
+
+
+/*
+ * Placeholder Text
+*/
+@mixin placeholderText($font-weight) {
+	::-webkit-input-placeholder { /* WebKit browsers */
+		font-weight: $font-weight;
+		color: $placeholder-color;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		font-weight: $font-weight;
+		color: $placeholder-color;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+		font-weight: $font-weight;
+		color: $placeholder-color;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10+ */
+		font-weight: $font-weight;
+		color: $placeholder-color;
+	}
+}
+
+
+/*
+ * Shapes
+*/
+@mixin circle($width, $color) {
+	width: $width;
+	height: $width;
+	background-color: $color;
+	@include border-radius(50%);
+	//	@include border-radius($width/2);
+}
+
+@mixin triangle($width, $dir, $color) {
+	@if $dir == up {
+		width: 0;
+		height: 0;
+		border-left: $width/2 solid transparent;
+		border-right: $width/2 solid transparent;
+		border-bottom: $width/2 solid $color;
+	}
+	@else if $dir == down {
+		width: 0;
+		height: 0;
+		border-left: $width/2 solid transparent;
+		border-right: $width/2 solid transparent;
+		border-top: $width/2 solid $color;
+	}
+	@else if $dir == right {
+		width: 0;
+		height: 0;
+		border-top: $width/2 solid transparent;
+		border-bottom: $width/2 solid transparent;
+		border-left: $width/2 solid $color;
+	}
+	@else if $dir == left {
+		width: 0;
+		height: 0;
+		border-top: $width/2 solid transparent;
+		border-bottom: $width/2 solid transparent;
+		border-right: $width/2 solid $color;
+	}
+}
+
+
+/*
+ * Base path for images
+*/
+$image-base-path: '../images' !default;
+
+@function asset($type, $file) {
+	@return url($image-base-path + '/' + $file);
+}
+
+// Image asset helper
+@function image($file) {
+	@return asset('images', $file);
+}
+
+
+/*
+ * Set aspect ratio
+*/
+@mixin aspect-ratio($width, $height) {
+	position: relative;
+	&:before {
+		display: block;
+		content: "";
+		width: 100%;
+		padding-top: ($height / $width) * 100%;
+	}
+	> .ratio-content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+/*
+ * Set aspect ratio with text inside
+*/
+@mixin aspect-ratio2($ratio-or-width, $height: null) {
+	$padding: if($height, percentage($height/$ratio-or-width), percentage(1/$ratio-or-width));
+	&:before { content:''; float: left; padding-bottom: $padding;  }
+	&:after  { content:''; display: table; clear: both;  }
+}

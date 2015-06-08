@@ -1,0 +1,19 @@
+@import "social-icons/*.png";
+
+.social-icon-container li {
+	display: inline-block;
+}
+
+.social-icon{
+	display: inline-block;
+}
+
+.facebook{
+	@include social-icons-sprite(facebook,true);
+}
+.youtube{
+	@include social-icons-sprite(youtube,true);
+}
+.twitter{
+	@include social-icons-sprite(twitter,true);
+}

@@ -1,0 +1,22 @@
+// CUSTOM BUTTON
+@mixin button($color) {
+	background-color: $color;
+	width: auto;
+	display: inline-block;
+	text-transform: capitalize;
+	margin: 0 10px 0 0;
+	color: #fff;
+	text-decoration: none !important;
+	@include pixelToREM('font-size', 16px);
+	@include pixelToREM('line-height', 22px);
+	@include pixelToREM('padding', 10px);
+}
+
+.button {
+	@include button(#f58220);
+
+	a {
+		color: #fff;
+		text-decoration: none !important;
+	}
+}
