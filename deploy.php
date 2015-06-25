@@ -9,7 +9,7 @@ require 'deployer/sync_tasks.php';
 require 'deployer/teardown_tasks.php';
 
 server('christina', 'christina.webtorque.co.nz')
-	->env('deploy_path', '/home/websites/my-website')
+	->env('deploy_path', 'sitepath')
 	->env('branch', 'staging')
     ->env('dbuser', 'root')
     ->env('dbpassword', '')

@@ -1,0 +1,8 @@
+{
+  "name": "webtorque/ss-installer",
+  "description": "Installer for default SilverStripe package",
+  "config": {
+    "process-timeout": 600
+  },
+  "minimum-stability": "RC"
+}
