@@ -1,0 +1,8 @@
+staging:
+  host: 'christina.webtorque.co.nz'
+  user: 'root'
+  stage: 'staging'
+  deploy_path: '/home/websites/your-site'
+  branch: 'staging'
+  dbuser: 'root'
+  dbpassword: ''

@@ -8,16 +8,7 @@ require 'deployer/deploy_tasks.php';
 require 'deployer/sync_tasks.php';
 require 'deployer/teardown_tasks.php';
 
-server('christina', 'christina.webtorque.co.nz')
-	->env('deploy_path', 'sitepath')
-	->env('branch', 'staging')
-    ->env('dbuser', 'root')
-    ->env('dbpassword', '')
-    ->user('root')
-    ->password('')
-    ->stage('staging');
-
-//stage('staging', ['staging'])->options(['branch' => 'staging']);
+serverList('servers.yml');
 
 set('repository', 'git@bitbucket.org:webtorque/my-website.git');
 set('shared_dirs', ['public/assets']);

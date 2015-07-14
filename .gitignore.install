@@ -15,6 +15,10 @@ public/versioned-gridfield/
 _ss_environment.php
 .idea/
 .vagrant/
+Vagrantfile
+setup.sh
+Gemfile
+Gemfile.lock
 build-scripts/node_modules/
 build-scripts/bower_components/
 db/
