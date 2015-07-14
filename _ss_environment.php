@@ -15,4 +15,4 @@ if (!defined('SS_DATABASE_SERVER')) {
 define('WKHTMLTOPDF_BINARY', '/usr/local/bin/wkhtmltopdf');
 
 global $_FILE_TO_URL_MAPPING;
-$_FILE_TO_URL_MAPPING['sitepath'] = 'http://localhost';
+$_FILE_TO_URL_MAPPING['sitepath'] = 'http://domain';
