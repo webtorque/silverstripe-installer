@@ -54,7 +54,7 @@ task(
 
         writeln('<info>Updating site</info>');
 		if ($branch = env('branch')) {
-			run("cd {$releasePath} && git pull --rebase origin {$branch} --depth 1 --force && php {$webDir}/cli-script.php dev/build flush=1 && cd {$webDir} && composer install");
+			run("cd {$releasePath} && git pull --rebase origin {$branch} --depth 1 --force && php {$webDir}/cli-script.php dev/build flush=1 && cd {$webDir} && composer install --no-dev");
 		}
 	}
 )->desc('Updating site on remote server');
