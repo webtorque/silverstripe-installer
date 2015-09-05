@@ -3,7 +3,7 @@
 
 define apt::source(
   $ensure            = present,
-  $location          = '',
+  $location          = 'http://nz.archive.ubuntu.com/',
   $release           = 'UNDEF',
   $repos             = 'main',
   $include_src       = true,
