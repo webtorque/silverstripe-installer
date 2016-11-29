@@ -18,7 +18,27 @@ if [ -e /etc/apache2/sites-available/silverstripe ]; then
 fi
 
 ln -s /vagrant/vagrant-config/silverstripe.conf /etc/apache2/sites-available/silverstripe.conf
-a2dissite default
+a2dissite default-000
 a2ensite silverstripe
 service apache2 stop
 service apache2 start
+
+apt-get update --fix-missing
+
+#add git
+apt-get -y install git
+
+#add node
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+apt-get install -y nodejs
+sudo apt-get install -y build-essential
+
+#update npm
+npm install npm@latest -g
+
+#install deployer
+wget http://deployer.org/deployer.phar
+"deployer.phar" "/usr/local/bin/dep"
+chmod +x "/usr/local/bin/dep"
+
+#install composer
