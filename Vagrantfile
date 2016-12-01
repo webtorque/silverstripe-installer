@@ -1,4 +1,4 @@
-agrant.configure("2") do |config|
+Vagrant.configure("2") do |config|
   config.vm.box = "webtorque/Debian8"
   config.vm.box_url = "file:///w:/vms/builds/debian-8-amd64_virtualbox.box"
   config.vm.synced_folder '.', "/vagrant", mount_options: ['dmode=775','fmode=775'], owner: 'vagrant', group: 'www-data'
