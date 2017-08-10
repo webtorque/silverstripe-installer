@@ -1,0 +1,56 @@
+.table {
+  opacity: 1;
+  transition: all ease-in-out 1s;
+
+  thead {
+    th {
+      background-color: #5c8e74;
+      color: #FFFFFF;
+    }
+  }
+
+  tbody {
+    td {
+      a {
+        color: $dark-grey;
+        text-decoration: none;
+      }
+    }
+
+    tr {
+      &:hover {
+        background-color: $green;
+
+        td a {
+          color: #FFF;
+        }
+      }
+    }
+  }
+}
+
+.sortable {
+  position: relative;
+  cursor: pointer;
+
+  &:after {
+    font-family: FontAwesome;
+    content: '\f0dc';
+    position: absolute;
+    right: 5px;
+    font-size: 14px;
+    color: $green;
+  }
+
+  &--asc:after {
+    content: '\f0de';
+  }
+
+  &--desc:after {
+    content: '\f0dd';
+  }
+}
+
+.loading .table {
+  opacity: 0.5;
+}

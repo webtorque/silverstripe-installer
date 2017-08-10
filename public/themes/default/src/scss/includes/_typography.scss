@@ -1,0 +1,31 @@
+h1 {
+  color: $light-green;
+  font-size: 30px;
+  background: url('#{$themeBase}/images/blood.png') no-repeat 0 50%;
+  padding-left: 30px;
+  font-weight: bold;
+  margin-bottom: 45px;
+}
+
+h2 {
+  color: $green;
+  font-size: 24px;
+
+  span {
+    opacity: 0.7;
+  }
+}
+
+h3 {
+  font-size: 18px;
+  color: #555555;
+}
+
+h4 {
+  font-size: 16px;
+  color: $green;
+}
+
+.centered {
+  text-align: center;
+}

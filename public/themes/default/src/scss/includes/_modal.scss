@@ -1,0 +1,44 @@
+.modal {
+  text-align: center;
+
+  .modal-header {
+    border-bottom: 0;
+    padding: 0 15px;
+  }
+
+  .modal-body {
+    padding: 0 15px 15px 15px;
+  }
+
+  .modal-footer {
+    border-top: 0;
+    text-align: center;
+    padding: 0px 15px 15px 15px;
+  }
+
+  &.success {
+    .modal-header {
+      height: 105px;
+      background: url('#{$themeBase}/images/done.png') no-repeat 50% 50%;
+      background-size: auto 75px;
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 11px;
+    color: #959494;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.modal-backdrop {
+  opacity: 0.7;
+}

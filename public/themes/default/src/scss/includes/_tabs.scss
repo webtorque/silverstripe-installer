@@ -1,0 +1,35 @@
+.nav-tabs {
+
+  > li {
+    text-align: center;
+
+    a {
+      background-color: $dark-grey;
+      color: #FFF;
+      font-weight: bold;
+      font-size: 12px;
+      border: 1px solid $dark-grey;
+    }
+
+    a:hover, a:focus {
+      background-color: #FFF;
+      color: $dark-grey;
+      border: 1px solid #ddd;
+    }
+
+    &.active {
+      a {
+        background-color: #FFF;
+        color: $dark-grey;
+        border: 1px solid #ddd;
+      }
+    }
+  }
+}
+
+.tab-content {
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-top: 0;
+  border-radius: 0 0 5px 5px;
+}

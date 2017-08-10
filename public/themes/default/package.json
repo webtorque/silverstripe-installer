@@ -1,0 +1,37 @@
+{
+  "name": "webtorque-ss-default",
+  "description": "Web Torque Default SilverStripe website",
+  "scripts": {
+    "watch": "node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --watch --watch-poll",
+    "build": "node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "package": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "lint": "node_modules/eslint/bin/eslint.js src/js"
+  },
+  "author": "Web Torque",
+  "license": "Copyright 2017 Web Torque",
+  "devDependencies": {
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
+    "laravel-mix": "^0.11.3",
+    "node-sass": "^4.5.3"
+  },
+  "optionalDependencies": {},
+  "dependencies": {
+    "array-includes": "^3.0.3",
+    "bootstrap": "git://github.com/twbs/bootstrap.git#v4-dev",
+    "es6-object-assign": "^1.1.0",
+    "es6-promise": "^4.1.0",
+    "eslint": "^3.19.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.1.1",
+    "jquery-validation": "^1.16.0",
+    "npm": "^4.0.2",
+    "parsleyjs": "^2.7.2",
+    "pikaday": "^1.6.1",
+    "semver": "^5.3.0",
+    "tether": "^1.4.0",
+    "underscore": "^1.8.3"
+  }
+}

@@ -1,0 +1,12 @@
+.icon-link {
+  padding-left: 20px;
+  position: relative;
+  &:before {
+    width: 20px;
+    height: 24px;
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;
+    background: url('#{$themeBase}/images/clip.png') no-repeat 0 50%;
+  }
+}

@@ -1,0 +1,81 @@
+---
+Only:
+  environment: dev
+---
+Injector:
+  Monolog:
+    class: Monolog\Logger
+    constructor:
+      0: App
+
+---
+Only:
+  environment: test
+---
+Injector:
+  Monolog:
+    class: Monolog\Logger
+    constructor:
+      0: App
+
+---
+Only:
+  environment: live
+---
+Injector:
+  Raven:
+    class: UserlessRavenClient
+    constructor:
+      0: 'https://d35926a421fd4f35bdfcc3a05148274b:0152d0ad16ed46ecbb36449d97047ed6@sentry.io/198021'
+  Monolog:
+    class: Monolog\Logger
+    constructor:
+      0: App
+      1:
+        - '%$RavenHandler'
+        - '%$NativeMailerHandler'
+      2:
+        - '%$MemoryPeakUsageProcessor'
+
+---
+Name: logging
+---
+Injector:
+  Backstop:
+    class: Heyday\Backstop\Backstop
+    constructor:
+      0: '%$Monolog'
+      1:
+        404: info
+        4??: error
+        5??: critical
+
+  LoggerBridge:
+    class: 'Camspiers\LoggerBridge\LoggerBridge'
+    constructor:
+      0: '%$Monolog'
+    properties:
+      ReportBacktrace: true
+
+  RavenHandler:
+    class: Monolog\Handler\RavenHandler
+    constructor:
+      0: '%$Raven'
+
+  ChromePHPHandler:
+    class: Monolog\Handler\ChromePHPHandler
+
+  FirePHPHandler:
+    class: Monolog\Handler\FirePHPHandler
+
+  NativeMailerHandler:
+    class: Monolog\Handler\NativeMailerHandler
+    constructor:
+      0:
+        - 'errors@webtorque.co.nz'
+      1: 'Critical error on immunoglobin'
+      2: errors@webtorque.co.nz
+      3: 500
+
+  MemoryPeakUsageProcessor:
+    class: Monolog\Processor\MemoryPeakUsageProcessor

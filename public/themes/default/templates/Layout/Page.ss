@@ -1,20 +1,17 @@
-<section role="layout">
-    <% include HeroImage %>
+<% if $ShowBreadcrumbs %>
+    $Breadcrumbs
+<% end_if %>
 
-    <div class="container">
-        <article class="fixed-w typography">
-            <div class="content">
+<% if $Content %>
+    <section id="$ModuleID" class="genericContentModule typography content-module text-only">
+        <div class="fixed-w">
+            <h1>$Title</h1>
 
-                $Content
-                $Form
+            $Content
+        </div>
+    </section>
+<% end_if %>
 
-                <% if $SortedContentModules %>
-                    <% loop $SortedContentModules %>
-                        $Me
-                    <% end_loop %>
-                <% end_if %>
-
-            </div>
-        </article>
-    </div>
-</section>
+$Form
+$CommentsForm
+<% include ContentModules %>

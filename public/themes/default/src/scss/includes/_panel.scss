@@ -1,0 +1,71 @@
+$panel-padding: 20px;
+
+.rounded-panel {
+  background-color: #FFF;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #888888;
+
+  &--margin-10 {
+    margin-bottom: 10px;
+  }
+
+  &--top {
+    //margin-top: 45px;
+  }
+
+  &--border-top {
+    border-top: 3px solid $green;
+  }
+
+  &--border-bottom {
+    border-bottom: 3px solid $green;
+  }
+
+  &--binder {
+    position: relative;
+
+    &:before {
+      content: ' ';
+      background: url('#{$themeBase}/images/rope.png') no-repeat;
+      width: 13px;
+      height: 38px;
+      position: absolute;
+      z-index: 2;
+      left: 30%;
+      bottom: -22px;
+    }
+
+    &:after {
+      content: ' ';
+      background: url('#{$themeBase}/images/rope.png') no-repeat;
+      width: 13px;
+      height: 38px;
+      position: absolute;
+      z-index: 2;
+      right: 30%;
+      bottom: -22px;
+    }
+  }
+
+  &__heading {
+    background-color: $grey;
+    font-size: 16px;
+    color: #FFF;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    padding-left: $panel-padding;
+    margin: 0;
+
+    &--top {
+      border-radius: 6px 6px 0 0;
+    }
+  }
+
+  &__content {
+    padding: $panel-padding;
+  }
+
+}
+
+

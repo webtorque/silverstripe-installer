@@ -1,0 +1,15 @@
+.pagination {
+  > li {
+    > a {
+      color: $green;
+    }
+  }
+
+  > .active {
+    &:hover > span,
+    > span {
+      background-color: $green;
+      border-color: $green;
+    }
+  }
+}

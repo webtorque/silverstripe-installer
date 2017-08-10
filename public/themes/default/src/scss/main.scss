@@ -1,0 +1,56 @@
+@import "../../node_modules/bootstrap3/dist/css/bootstrap";
+@import "../../node_modules/pikaday/scss/pikaday";
+
+@import "includes/variables";
+@import "font-awesome/font-awesome.scss";
+@import "includes/buttons";
+@import "includes/fonts";
+@import "includes/footer";
+@import "includes/forms";
+@import "includes/icons";
+@import "includes/modal";
+@import "includes/paging";
+@import "includes/panel";
+@import "includes/parsley";
+@import "includes/tables";
+@import "includes/tabs";
+@import "includes/typography";
+@import "components/clinician-home";
+@import "components/dashboard-page";
+@import "components/header";
+@import "components/login-form";
+
+html {
+  background-image: url("#{$themeBase}/images/paper.gif");
+  background-repeat: repeat;
+}
+
+body {
+  font: 14px/1.5 Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.content-container {
+  padding-top: 55px;
+  padding-bottom: 150px;
+}
+
+.mx-auto {
+  margin: 0 auto;
+  float: none;
+}
+
+.caret {
+  position: absolute;
+  left: 90%;
+  top: 45%;
+}
+
+.clear-left {
+  clear: left;
+}
+
+.clear-right {
+  clear: right;
+}

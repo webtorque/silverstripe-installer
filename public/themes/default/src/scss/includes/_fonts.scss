@@ -1,0 +1,16 @@
+@font-face {
+  font-family: HeleviticaLT;
+  font-weight:normal;
+  src: url("#{$themeBase}/fonts/HelveticaNeueLTStd-Md.otf") format("opentype");
+
+}
+@font-face {
+  font-family: HeleviticaLight;
+
+  src: url("#{$themeBase}/fonts/HelveticaNeueLTStd-Lt.otf") format("opentype");
+}
+@font-face {
+  font-family: HeleviticaLT;
+  font-weight: bold;
+  src: url("#{$themeBase}/fonts/HelveticaNeueLTStd-Bd.otf") format("opentype");
+}

@@ -1,0 +1,13 @@
+Injector:
+  MailTransport:
+    class: 'WebTorque\QueuedMailer\Transport\SendinBlueTransport'
+    constructor:
+      0: 'https://api.sendinblue.com/v2.0'
+      1: 'enter key'
+      2: 'enter ip'
+QueueProcessor:
+  batch_size: 100
+  application_identifier: 'add identifier for site'
+  retry_time: 30
+Email:
+  admin_email: 'replace-me@webtorque.co.nz'
